@@ -1,17 +1,13 @@
-{% extends 'base.html' %}
-
+{% extends "base.html" %}
 {% load bootstrap_tags %}
-
-{% block page_title %}Registration Page{% endblock %}
-
-{% block page_heading %}User Registration{% endblock %}
-
 {% block content %}
-
-<p>If you already have an account, please <a href="{% url 'login' %}">login here</a></p>
-<form method="POST">
-    {% csrf_token %}
-    {{ registration_form | as_bootstrap }}
-    <button class="btn btn-outline-success" type="submit">Register</button>
-</form>
+    <form method="post" action="{% url 'register' %}" class="accountform">
+        <fieldset class="form-group">
+            <legend>Create a new account</legend>
+            <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
+            {% csrf_token %}
+            {{  user_form | as_bootstrap }}
+            <button type="submit" class="btn btn-primary">Create account</button>
+        </fieldset>
+    </form>
 {% endblock %}

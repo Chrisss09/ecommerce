@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from accounts.views import index, logout, login, register, user_profile
+from accounts.views import index, logout, login, register, profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -8,6 +8,6 @@ urlpatterns = [
     path('accounts/logout/', logout, name='logout'),
     path('accounts/login/', login, name='login'),
     path('accounts/register/', register, name='register'),
-    path('accounts/profile/', user_profile, name='profile'),
+    path('accounts/profile/', profile, name='profile'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
