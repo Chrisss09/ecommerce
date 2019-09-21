@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from accounts.views import index, logout, login, register, profile
 from products import urls as urls_products
+from cart import urls as urls_cart
 from products.views import all_products
 from django.conf.urls.static import static
 from django.conf import settings
@@ -15,4 +16,5 @@ urlpatterns = [
     path('accounts/profile/', profile, name='profile'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('products/', include(urls_products)),
+    path('cart/', include(urls_cart)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
