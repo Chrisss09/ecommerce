@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 
-
 class EmailAuth:
     
     def authenticate(self, request, username=None, password=None):
