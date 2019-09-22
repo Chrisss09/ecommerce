@@ -18,3 +18,8 @@ footer {
 .accountform {
     padding-top: 20px;
 }
+
+a > .fa-shopping-cart, .heading-cart {
+    color: #fff;
+    text-decoration: none;
+}
