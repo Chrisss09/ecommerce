@@ -7,8 +7,8 @@ class MakePaymentForm(forms.Form):
 
     credit_card_number = forms.CharField(label='Credit card number', required=False)
     cvv = forms.CharField(label='Security code (cvv)', required=False)
-    expirey_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
-    expirey_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
+    expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
+    expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
     stripe_id = forms.CharField(widget=forms.HiddenInput)
 
 class OrderForm(forms.ModelForm):
