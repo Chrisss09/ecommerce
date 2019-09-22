@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block head_js %}
+<script type="text/javascript" src="https://js.strip.com/v2/"></script>
+<script type="text/javascript" src="">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+{% endblock %}
