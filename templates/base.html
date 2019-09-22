@@ -34,7 +34,7 @@
                         <li><a href="{% url 'register' %}">Register</a></li>
                         <li><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
-                    <a class="heading-cart" href="{% url 'view_cart' %">
+                    <a class="heading-cart" href="{% url 'view_cart' %}">
                         <i class="fas fa-shopping-cart"></i> Cart
                         {% if product_count > 0 %}
                         <label class="badge badge-warning">{{ product_count }}</label>
